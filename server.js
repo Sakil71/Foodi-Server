@@ -5,6 +5,7 @@ import { connectDb } from "./config/db.js";
 import foodRouter from "./routes/foodRouter.js";
 import userRouter from "./routes/userRouter.js";
 import cartRouter from "./routes/cartRouter.js";
+import orderRouter from "./routes/orderRouter.js";
 
 
 // App Config
@@ -24,6 +25,7 @@ app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
 
 
 app.get('/', (req, res) => {
